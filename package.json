@@ -1,0 +1,29 @@
+{
+  "name": "newsskimmer",
+  "version": "1.0.0",
+  "description": "##Intro",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.4.19",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SandersCecily/NewsSkimmer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SandersCecily/NewsSkimmer/issues"
+  },
+  "homepage": "https://github.com/SandersCecily/NewsSkimmer#readme"
+}
