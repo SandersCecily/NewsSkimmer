@@ -1,0 +1,97 @@
+{{!-- <div class="modal fade modalNote" id="noteModal{{this._id}}" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Comments on Article: {{this.title}}</h4>
+            </div>
+            <div class="modal-body">
+                {{#if this.notes}}
+                {{#each this.notes}}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p class="previousNotes">{{this.body}} <button type="button"
+                                class="btn btn-danger delete-note-btn" data-note-id={{this._id}} data-article-id={{this.article}}> X </button>
+                        </p>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Add a comment!</h4>
+                        <br>
+                    </div>
+                </div>
+                {{/if}}
+                <div class="form-group">
+                    <textarea id="note-Body{{this._id}}" class="form-control" rows="4"
+                        placeholder="New Note"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary save-note-btn" data-id={{this._id}}>Save Note</button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+
+Skip to content
+Why GitHub? 
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+0 0 0 TJANGEL/Website_Scraper_tester
+ Code  Issues 0  Pull requests 0  Projects 0  Insights
+Join GitHub today
+GitHub is home to over 31 million developers working together to host and review code, manage projects, and build software together.
+
+Website_Scraper_tester/views/layouts/partials/modal.handlebars
+@TJANGEL TJANGEL added comments
+383c121 on Feb 6
+37 lines (36 sloc)  1.63 KB
+    
+<div class="modal fade modalNote" id="noteModal{{this._id}}" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
+                <h4 class="modal-title">Comments on Article: {{this.title}}</h4>
+            </div>
+            <div class="modal-body">
+                {{#if this.notes}}
+                {{#each this.notes}}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <p class="previousNotes">{{this.body}} <button type="button" class="btn btn-danger delete-note-btn"
+                                data-note-id={{this._id}} data-article-id={{this.article}}> X </button>
+                        </p>
+                    </div>
+                </div>
+                {{/each}}
+                {{else}}
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4>Add a comment!</h4>
+                        <br>
+                    </div>
+                </div>
+                {{/if}}
+                <div class="form-group">
+                    <textarea id="note-Body{{this._id}}" class="form-control" rows="4" placeholder="New Note"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary save-note-btn" data-id={{this._id}}>Save Note</button>
+            </div>
+        </div>
+    </div>
+</div>

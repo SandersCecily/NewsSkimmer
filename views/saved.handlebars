@@ -1,0 +1,31 @@
+<div class="jumbotron">
+    <div class="col-lg-12 text-center">
+        <h1 class="display-4">Saved Articles</h1>
+        <hr class="my-4">
+        <p class="lead">Here's the articles you found important...</p>
+    </div>
+</div>
+<div class="container">
+    {{#each article}}
+    <div class="card">
+        <div class="card-header">
+            <a href={{this.link}} target="_blank" class="card-link">
+                <h4 class="card-title">{{this.title}}</h4>
+            </a>
+        </div>
+        <div class="card-body">
+            <br>
+            <p class="card-text">Article Summary: {{this.summary}}</p>
+
+            <br>
+            <br>
+            <button type="button" class="btn btn-success addNote" data-toggle="modal"
+                data-target="#noteModal{{this._id}}" data-id={{this._id}}>Comments on Article</button>
+            <button type="button" class="btn btn-danger delete" data-id={{this._id}}>Delete</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<!--Clicked Notes Modal-->
+{{#each article}} {{> modal }} {{/each}}

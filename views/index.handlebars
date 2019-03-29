@@ -1,0 +1,29 @@
+<div class="jumbotron">
+    <h1 class="display-4">Scraped Up News</h1>
+    <p class="lead">This is Google News. Because you used Google to find the news and they have their own.</p>
+    <hr class="my-4">
+    <p>To get started, click the "Scrape Articles" button. From there you can save and comment as
+        you please!</p>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+        {{#each article}}
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">{{this.title}}</h2>
+                <br>
+                <p class="card-text">Article Summary: {{this.summary}}</p>
+
+                <br>
+                <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
+                <button type="button" class="btn btn-primary read"><a href={{this.link}} target="_blank"
+                        class="card-link">Read Article</a></button>
+            </div>
+        </div>
+        {{/each}}
+        {{#unless articles}}
+        <h3>What are you waiting for? Push the button!</h3>
+        {{/unless}}
+    </div>
+</div>
