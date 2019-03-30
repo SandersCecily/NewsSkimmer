@@ -1,6 +1,6 @@
 # NewsSkimmer
 
-##Intro
+## Intro
 
 
 ## Technology Used
