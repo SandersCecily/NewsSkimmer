@@ -10,15 +10,15 @@
     <div class="row">
         {{#each article}}
         <div class="card">
+            <div class="card-header">
+            <a href={{this.link}} target="_blank" class="card-link">
+                <h4 class="card-title">{{this.title}}</h4>
+            </a>
+        </div>
             <div class="card-body">
-                <h2 class="card-title">{{this.title}}</h2>
-                <br>
                 <p class="card-text">Article Summary: {{this.summary}}</p>
-
                 <br>
                 <button type="button" class="btn btn-success save" data-id={{this._id}}>Save Article</button>
-                <button type="button" class="btn btn-primary read"><a href={{this.link}} target="_blank"
-                        class="card-link">Read Article</a></button>
             </div>
         </div>
         {{/each}}
