@@ -2,7 +2,7 @@ var express = require("express");
 var axios = require("axios");
 var cheerio = require("cheerio");
 var router = express.Router();
-var db = require("../models");
+var db = require("../models/Index.js");
 var Note = require("../models/Note.js");
 
 router.get("/", function (req, res) {
